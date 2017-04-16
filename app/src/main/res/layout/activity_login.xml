@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_std_grey_pressed"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.wxk.erbiao.LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        android:background="@color/toolBarBackground"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/text_color_white"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.wxk.erbiao.ClearEditText
+        android:id="@+id/editText_userName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/login_user_icon"
+        android:drawablePadding="20dp"
+        android:hint="@string/user_name_hint"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:textCursorDrawable="@drawable/cursor" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorGray" />
+
+    <com.wxk.erbiao.ClearEditText
+        android:id="@+id/editText_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/login_pwd_icon"
+        android:drawablePadding="20dp"
+        android:hint="@string/user_pwd_hint"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:textCursorDrawable="@drawable/cursor" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorGray" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_std_yellow_btn"
+        android:text="@string/login_log_btn_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/custom_medium_text_size" />
+
+</LinearLayout>

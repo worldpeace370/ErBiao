@@ -4,4 +4,15 @@
     <string name="chicken">厨房</string>
     <string name="living_room">客厅</string>
     <string name="bed_room">卧室</string>
+    <string name="user_name_hint">用户名</string>
+    <string name="user_pwd_hint">密码</string>
+    <string name="login_log_btn_text">登录</string>
+    <string name="login">登录</string>
+    <string name="led_control">灯光控制</string>
+    <string name="smart_house">智能家居</string>
+    <string name="temp_control">温度控制</string>
+    <string name="light_control">光强监测</string>
+    <string name="security_control">安防监测</string>
+    <string name="gas_control">瓦斯监测</string>
+    <string name="video_control">视频监控</string>
 </resources>

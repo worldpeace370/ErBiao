@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:card_view="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        android:background="@color/toolBarBackground"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/led_control"
+            android:textColor="@color/text_color_white"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -18,59 +37,52 @@
         card_view:cardPreventCornerOverlap="true"
         card_view:cardUseCompatPadding="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
 
             <ImageView
                 android:id="@+id/img_bash_room"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@mipmap/bash_room"/>
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/bash_room" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
 
             <TextView
                 android:id="@+id/label_bash_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_bash_room"
                 android:text="@string/bash_room"
                 android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
+                android:textSize="22sp" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
-
-            <TextView
-                android:id="@+id/status_bash_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
 
             <com.suke.widget.SwitchButton
                 android:id="@+id/switch_button_bash_room"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed"/>
-        </LinearLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                app:sb_checked_color="@color/colorLed" />
+
+            <TextView
+                android:id="@+id/status_bash_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/switch_button_bash_room"
+                android:text="已关闭"
+                android:textColor="@color/colorLed"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
@@ -87,59 +99,52 @@
         card_view:cardPreventCornerOverlap="true"
         card_view:cardUseCompatPadding="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
 
             <ImageView
                 android:id="@+id/img_chicken"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@mipmap/chicken"/>
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/chicken" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
 
             <TextView
                 android:id="@+id/label_chicken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_chicken"
                 android:text="@string/chicken"
                 android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
+                android:textSize="22sp" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
-
-            <TextView
-                android:id="@+id/status_chicken"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
 
             <com.suke.widget.SwitchButton
                 android:id="@+id/switch_button_chicken"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed"/>
-        </LinearLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                app:sb_checked_color="@color/colorLed" />
+
+            <TextView
+                android:id="@+id/status_chicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/switch_button_chicken"
+                android:text="已关闭"
+                android:textColor="@color/colorLed"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
@@ -156,59 +161,52 @@
         card_view:cardPreventCornerOverlap="true"
         card_view:cardUseCompatPadding="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
 
             <ImageView
                 android:id="@+id/img_living_room"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@mipmap/living_room"/>
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/living_room" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
 
             <TextView
                 android:id="@+id/label_living_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_living_room"
                 android:text="@string/living_room"
                 android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
+                android:textSize="22sp" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
-
-            <TextView
-                android:id="@+id/status_living_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
 
             <com.suke.widget.SwitchButton
                 android:id="@+id/switch_button_living_room"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed"/>
-        </LinearLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                app:sb_checked_color="@color/colorLed" />
+
+            <TextView
+                android:id="@+id/status_living_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/switch_button_living_room"
+                android:text="已关闭"
+                android:textColor="@color/colorLed"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
@@ -225,59 +223,52 @@
         card_view:cardPreventCornerOverlap="true"
         card_view:cardUseCompatPadding="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
 
             <ImageView
                 android:id="@+id/img_bed_room"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@mipmap/bed_room"/>
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/bed_room" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
 
             <TextView
                 android:id="@+id/label_bed_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_bed_room"
                 android:text="@string/bed_room"
                 android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
+                android:textSize="22sp" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed"/>
-
-            <TextView
-                android:id="@+id/status_bed_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp"/>
 
             <com.suke.widget.SwitchButton
                 android:id="@+id/switch_button_bed_room"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed"/>
-        </LinearLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                app:sb_checked_color="@color/colorLed" />
+
+            <TextView
+                android:id="@+id/status_bed_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/switch_button_bed_room"
+                android:text="已关闭"
+                android:textColor="@color/colorLed"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 

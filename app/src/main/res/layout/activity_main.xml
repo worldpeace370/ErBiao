@@ -4,282 +4,282 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <android.support.v7.widget.CardView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        android:background="@color/toolBarBackground"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/smart_house"
+            android:textColor="@color/text_color_white"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="#ffffff"
-        app:contentPadding="8dp"
-        card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="100dp"
-        card_view:cardPreventCornerOverlap="true"
-        card_view:cardUseCompatPadding="true">
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="100dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true">
 
-            <ImageView
-                android:id="@+id/img_bash_room"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/bash_room" />
-
-            <View
-                android:layout_width="1dp"
+            <LinearLayout
+                android:id="@+id/led_control"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
+                android:background="@drawable/bg_custom_selector"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/label_bash_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/bash_room"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/led_control" />
 
-            <View
-                android:layout_width="1dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/led_control"
+                    android:textColor="@color/colorLed"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="80dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="100dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/temp_control"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
+                android:background="@drawable/bg_custom_selector"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/status_bash_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/temp_control" />
 
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switch_button_bash_room"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed" />
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temp_control"
+                    android:textColor="@color/colorLed"
+                    android:textSize="16sp" />
 
 
-    <android.support.v7.widget.CardView
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="#ffffff"
-        app:contentPadding="8dp"
-        card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="100dp"
-        card_view:cardPreventCornerOverlap="true"
-        card_view:cardUseCompatPadding="true">
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="100dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true">
 
-            <ImageView
-                android:id="@+id/img_chicken"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/chicken" />
-
-            <View
-                android:layout_width="1dp"
+            <LinearLayout
+                android:id="@+id/light_control"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
+                android:background="@drawable/bg_custom_selector"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/label_chicken"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/chicken"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/light_control" />
 
-            <View
-                android:layout_width="1dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/light_control"
+                    android:textColor="@color/colorLed"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="80dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="100dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/security_control"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
+                android:background="@drawable/bg_custom_selector"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/status_chicken"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/security_control" />
 
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switch_button_chicken"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed" />
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security_control"
+                    android:textColor="@color/colorLed"
+                    android:textSize="16sp" />
 
 
-    <android.support.v7.widget.CardView
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="#ffffff"
-        app:contentPadding="8dp"
-        card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="100dp"
-        card_view:cardPreventCornerOverlap="true"
-        card_view:cardUseCompatPadding="true">
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="100dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true">
 
-            <ImageView
-                android:id="@+id/img_living_room"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/living_room" />
-
-            <View
-                android:layout_width="1dp"
+            <LinearLayout
+                android:id="@+id/gas_control"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
+                android:background="@drawable/bg_custom_selector"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/label_living_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/living_room"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/gas_control" />
 
-            <View
-                android:layout_width="1dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gas_control"
+                    android:textColor="@color/colorLed"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="80dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="100dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/video_control"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
+                android:background="@drawable/bg_custom_selector"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/status_living_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/video_control" />
 
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switch_button_living_room"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed" />
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video_control"
+                    android:textColor="@color/colorLed"
+                    android:textSize="16sp" />
 
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="#ffffff"
-        app:contentPadding="8dp"
-        card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="100dp"
-        card_view:cardPreventCornerOverlap="true"
-        card_view:cardUseCompatPadding="true">
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        </android.support.v7.widget.CardView>
 
-            <ImageView
-                android:id="@+id/img_bed_room"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/bed_room" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
-
-            <TextView
-                android:id="@+id/label_bed_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/bed_room"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorLed" />
-
-            <TextView
-                android:id="@+id/status_bed_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
-                android:textSize="22sp" />
-
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switch_button_bed_room"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="2dp"
-                app:sb_checked_color="@color/colorLed" />
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 
 </LinearLayout>

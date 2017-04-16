@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbarHeight">56dp</dimen>
+    <dimen name="custom_medium_text_size">20sp</dimen>
+    <dimen name="common_radius">2dp</dimen>
+    <dimen name="custom_mini_text_size">14sp</dimen>
+</resources>
