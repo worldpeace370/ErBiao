@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ErBiao</string>
+    <string name="bash_room">浴室</string>
+    <string name="chicken">厨房</string>
+    <string name="living_room">客厅</string>
+    <string name="bed_room">卧室</string>
+</resources>
