@@ -1,6 +1,7 @@
 package com.wxk.erbiao;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -9,7 +10,7 @@ public class LoginActivity extends BaseActivity {
     private ClearEditText mUserName;
     private ClearEditText mPassWord;
     private Button mBtnLogin;
-
+    private long exitTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,5 +52,25 @@ public class LoginActivity extends BaseActivity {
             startActivityByClassName(MainActivity.class);
             finish();
         }
+    }
+
+    /**
+     * 如果两秒内按了两次返回键则退出程序,否则不会
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK && event.getRepeatCount()==0){
+            if (System.currentTimeMillis() - exitTime > 2000){
+                Toast.makeText(LoginActivity.this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            }else {
+                finish();
+            }
+            exitTime = System.currentTimeMillis();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

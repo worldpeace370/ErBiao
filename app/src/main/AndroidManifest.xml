@@ -20,7 +20,11 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".LedControlActivity"></activity>
+        <activity android:name=".LedControlActivity" />
+        <activity android:name=".TempControlActivity" />
+        <activity android:name=".LightControlActivity" />
+        <activity android:name=".GasControlActivity" />
+        <activity android:name=".VideoControlActivity"></activity>
     </application>
 
 </manifest>

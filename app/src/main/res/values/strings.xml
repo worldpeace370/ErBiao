@@ -10,7 +10,7 @@
     <string name="login">登录</string>
     <string name="led_control">灯光控制</string>
     <string name="smart_house">智能家居</string>
-    <string name="temp_control">温度控制</string>
+    <string name="temp_control">温度监测</string>
     <string name="light_control">光强监测</string>
     <string name="security_control">安防监测</string>
     <string name="gas_control">瓦斯监测</string>

@@ -1,8 +1,10 @@
 package com.wxk.erbiao;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
 
@@ -12,7 +14,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private LinearLayout mSecurityControl;
     private LinearLayout mGasControl;
     private LinearLayout mVideoControl;
-
+    private long exitTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,16 +57,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 startActivityByClassName(LedControlActivity.class);
                 break;
             case R.id.temp_control:
-
+                startActivityByClassName(TempControlActivity.class);
                 break;
             case R.id.light_control:
-
+                startActivityByClassName(LightControlActivity.class);
                 break;
             case R.id.security_control:
 
                 break;
             case R.id.gas_control:
-
+                startActivityByClassName(GasControlActivity.class);
                 break;
             case R.id.video_control:
 
@@ -72,5 +74,25 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             default:
                 break;
         }
+    }
+
+    /**
+     * 如果两秒内按了两次返回键则退出程序,否则不会
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK && event.getRepeatCount()==0){
+            if (System.currentTimeMillis() - exitTime > 2000){
+                Toast.makeText(MainActivity.this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            }else {
+                finish();
+            }
+            exitTime = System.currentTimeMillis();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
