@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.concurrent.Executor;
@@ -44,6 +45,12 @@ public class GasControlActivity extends BaseActivity {
         mGasLivingRoom = ((TextView) findViewById(R.id.gas_living_room));
         mGasBedRoom = ((TextView) findViewById(R.id.gas_bed_room));
         initToolbar("", R.id.toolbar);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
@@ -92,8 +99,8 @@ public class GasControlActivity extends BaseActivity {
     };
 
     private void setGasStatus(String tempValue, TextView textView) {
-        if (tempValue.equals("0.00")) {
-            textView.setText("读取中...");
+        if (tempValue.equals("    0.00")) {
+            textView.setText(getResources().getString(R.string.in_reading));
             textView.setTextColor(colorGreen);
         } else {
             textView.setText(tempValue);

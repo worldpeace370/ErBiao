@@ -16,6 +16,6 @@
     <string name="gas_control">瓦斯监测</string>
     <string name="video_control">视频监控</string>
     <string name="change_ip">改变ip</string>
-    <string name="in_reading">读取中…</string>
+    <string name="in_reading">离线中…</string>
     <string name="ip">192.168.0.118</string>
 </resources>

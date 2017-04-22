@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.suke.widget.SwitchButton;
@@ -57,6 +58,12 @@ public class LedControlActivity extends BaseActivity implements SwitchButton.OnC
         mSwitchLivingRoom = (SwitchButton) findViewById(R.id.switch_button_living_room);
         mSwitchBedRoom = (SwitchButton) findViewById(R.id.switch_button_bed_room);
         initToolbar("", R.id.toolbar);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
@@ -116,8 +123,8 @@ public class LedControlActivity extends BaseActivity implements SwitchButton.OnC
             textView.setText("已关闭");
             textView.setTextColor(colorGray);
             button.setChecked(false);
-        } else {
-            textView.setText("读取中...");
+        } else if (status != null && status.equals("2")) {
+            textView.setText(getResources().getString(R.string.in_reading));
             textView.setTextColor(ContextCompat.getColor(this, R.color.color_std_green));
             button.setChecked(false);
         }

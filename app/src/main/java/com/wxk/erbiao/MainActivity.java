@@ -75,6 +75,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mGasControl = (LinearLayout) findViewById(R.id.gas_control);
         mVideoControl = (LinearLayout) findViewById(R.id.video_control);
         initToolbar("", R.id.toolbar);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                android.os.Process.killProcess(android.os.Process.myPid());
+            }
+        });
         getToolbar().inflateMenu(R.menu.change_ip);
     }
 
@@ -159,10 +166,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.layout_change_ip, null);
         final EditText editText = (EditText) view.findViewById(R.id.edit_text_ip);
-        String ipStr = getResources().getString(R.string.ip);
-        editText.setText(ipStr);
+        String saveIp = LebronPreference.getInstance().getChangedIp();
+        if ("".equals(saveIp)) {
+            saveIp = getResources().getString(R.string.ip);
+        }
+        editText.setText(saveIp);
         //移动光标到最后
-        editText.setSelection(ipStr.length());
+        editText.setSelection(saveIp.length());
         //加载布局View到当前对话框
         builder.setView(view);
         builder.setTitle("更改ip");

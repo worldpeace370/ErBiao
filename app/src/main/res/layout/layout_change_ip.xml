@@ -9,6 +9,7 @@
         android:layout_width="160dp"
         android:layout_height="match_parent"
         android:textColor="@color/color_std_blue"
+        android:inputType="number"
         android:textSize="@dimen/custom_medium_text_size"
         android:text="@string/ip"/>
 

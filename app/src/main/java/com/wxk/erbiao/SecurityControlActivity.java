@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,6 +35,7 @@ public class SecurityControlActivity extends BaseActivity {
 
     private int colorBlue;
     private int colorGray;
+    private int colorGreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,12 @@ public class SecurityControlActivity extends BaseActivity {
         mImgLivingRoom = (ImageView) findViewById(R.id.security_icon_living_room);
         mImgBedRoom = (ImageView) findViewById(R.id.security_icon_bed_room);
         initToolbar("", R.id.toolbar);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
@@ -66,6 +74,7 @@ public class SecurityControlActivity extends BaseActivity {
     protected void init() {
         colorBlue = ContextCompat.getColor(this, R.color.colorLed);
         colorGray = ContextCompat.getColor(this, R.color.gray_security_no);
+        colorGreen = ContextCompat.getColor(this, R.color.color_std_green);
         mSocketService = ((MyApplication) getApplication()).getSocketService();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(SocketService.INTENT_ACTION_SECURITY_DATA);
@@ -112,10 +121,10 @@ public class SecurityControlActivity extends BaseActivity {
             textView.setText("没人");
             textView.setTextColor(colorGray);
             imageView.setImageResource(R.mipmap.security_icon_no);
-        } else {
-            textView.setText("异常");
-            textView.setTextColor(colorGray);
-            imageView.setImageResource(R.mipmap.security_icon_no);
+        } else if (status != null && status.equals("2")) {
+            textView.setText(getResources().getString(R.string.in_reading));
+            textView.setTextColor(colorGreen);
+            imageView.setImageResource(R.mipmap.in_reading_security);
         }
     }
 

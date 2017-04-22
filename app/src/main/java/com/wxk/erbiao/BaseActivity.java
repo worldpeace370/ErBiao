@@ -62,12 +62,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     public void initToolbar(String title, int toolbarId) {
         mToolbar = (Toolbar) findViewById(toolbarId);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
         mToolbar.setNavigationIcon(R.mipmap.icon_toolbar_navigation);
         mToolbar.setTitle(title);
     }

@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.concurrent.Executor;
@@ -44,6 +45,12 @@ public class TempControlActivity extends BaseActivity {
         mTempLivingRoom = (TextView) findViewById(R.id.temp_living_room);
         mTempBedRoom = (TextView) findViewById(R.id.temp_bed_room);
         initToolbar("", R.id.toolbar);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
@@ -95,7 +102,7 @@ public class TempControlActivity extends BaseActivity {
 
     private void setTempStatus(String tempValue, TextView textView) {
         if (tempValue.equals("+  0.0")) {
-            textView.setText("读取中...");
+            textView.setText(getResources().getString(R.string.in_reading));
             textView.setTextColor(colorGreen);
         } else {
             textView.setText(tempValue);
