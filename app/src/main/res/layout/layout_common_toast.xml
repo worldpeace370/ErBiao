@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:maxWidth="100dp"
+            android:maxWidth="160dp"
             android:textColor="@android:color/white"
             android:textSize="@dimen/custom_mini_text_size" />
     </LinearLayout>

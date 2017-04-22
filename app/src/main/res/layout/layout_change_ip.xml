@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/change_ip_height"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/edit_text_ip"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/color_std_blue"
+        android:textSize="@dimen/custom_medium_text_size"
+        android:text="@string/ip"/>
+
+</LinearLayout>

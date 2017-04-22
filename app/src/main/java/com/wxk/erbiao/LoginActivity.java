@@ -25,6 +25,7 @@ public class LoginActivity extends BaseActivity {
         mUserName = (ClearEditText) findViewById(R.id.editText_userName);
         mPassWord = (ClearEditText) findViewById(R.id.editText_pwd);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
+        initToolbar("", R.id.toolbar);
     }
 
     @Override

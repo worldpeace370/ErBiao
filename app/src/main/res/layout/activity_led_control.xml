@@ -63,23 +63,23 @@
 
 
             <com.suke.widget.SwitchButton
-                android:id="@+id/temp_icon_chicken"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:id="@+id/switch_button_bash_room"
+                android:layout_width="@dimen/switch_button_width"
+                android:layout_height="@dimen/switch_button_height"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 app:sb_checked_color="@color/colorLed" />
 
             <TextView
-                android:id="@+id/temp_chicken"
+                android:id="@+id/status_bash_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:layout_toLeftOf="@id/temp_icon_chicken"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
+                android:layout_toLeftOf="@id/switch_button_bash_room"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>
@@ -126,8 +126,8 @@
 
             <com.suke.widget.SwitchButton
                 android:id="@+id/switch_button_chicken"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/switch_button_width"
+                android:layout_height="@dimen/switch_button_height"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
@@ -140,8 +140,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 android:layout_toLeftOf="@id/switch_button_chicken"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>
@@ -188,8 +188,8 @@
 
             <com.suke.widget.SwitchButton
                 android:id="@+id/switch_button_living_room"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/switch_button_width"
+                android:layout_height="@dimen/switch_button_height"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
@@ -202,8 +202,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 android:layout_toLeftOf="@id/switch_button_living_room"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>
@@ -250,8 +250,8 @@
 
             <com.suke.widget.SwitchButton
                 android:id="@+id/switch_button_bed_room"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/switch_button_width"
+                android:layout_height="@dimen/switch_button_height"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
@@ -264,8 +264,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 android:layout_toLeftOf="@id/switch_button_bed_room"
-                android:text="已关闭"
-                android:textColor="@color/colorLed"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>

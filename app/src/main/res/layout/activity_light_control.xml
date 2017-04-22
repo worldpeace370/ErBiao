@@ -70,15 +70,15 @@
                 android:layout_marginRight="4dp"
                 android:src="@mipmap/light_icon" />
 
-            <com.tomer.fadingtextview.FadingTextView
+            <TextView
                 android:id="@+id/light_bash_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 android:layout_toLeftOf="@id/light_icon_bash_room"
-                android:text="23"
-                android:textColor="@color/colorLed"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>
@@ -132,15 +132,15 @@
                 android:layout_marginRight="4dp"
                 android:src="@mipmap/light_icon" />
 
-            <com.tomer.fadingtextview.FadingTextView
+            <TextView
                 android:id="@+id/light_chicken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 android:layout_toLeftOf="@id/light_icon_chicken"
-                android:text="23"
-                android:textColor="@color/colorLed"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>
@@ -194,15 +194,15 @@
                 android:layout_marginRight="4dp"
                 android:src="@mipmap/light_icon" />
 
-            <com.tomer.fadingtextview.FadingTextView
+            <TextView
                 android:id="@+id/light_living_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 android:layout_toLeftOf="@id/light_icon_living_room"
-                android:text="23"
-                android:textColor="@color/colorLed"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>
@@ -256,15 +256,15 @@
                 android:layout_marginRight="4dp"
                 android:src="@mipmap/light_icon" />
 
-            <com.tomer.fadingtextview.FadingTextView
+            <TextView
                 android:id="@+id/light_bed_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
                 android:layout_toLeftOf="@id/light_icon_bed_room"
-                android:text="23"
-                android:textColor="@color/colorLed"
+                android:text="@string/in_reading"
+                android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
 
         </RelativeLayout>

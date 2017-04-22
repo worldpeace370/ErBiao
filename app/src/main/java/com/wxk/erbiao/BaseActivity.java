@@ -2,7 +2,9 @@ package com.wxk.erbiao;
 
 import android.content.Intent;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,8 @@ import android.widget.Toast;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
+    protected Toolbar mToolbar;
+
     /**
      * bind views
      */
@@ -31,6 +35,46 @@ public abstract class BaseActivity extends AppCompatActivity {
      * init data
      */
     protected abstract void init();
+
+    /**
+     * 初始化Toolbar
+     */
+    public void initToolbar() {
+        initToolbar(getResources().getString(R.string.app_name));
+    }
+
+    /**
+     * 初始化Toolbar
+     */
+    public void initToolbar(@StringRes int titleResId) {
+        initToolbar(getResources().getString(titleResId));
+    }
+
+    /**
+     * 初始化Toolbar
+     */
+    public void initToolbar(String title) {
+        initToolbar(title, R.id.toolbar);
+    }
+
+    /**
+     * 初始化Toolbar
+     */
+    public void initToolbar(String title, int toolbarId) {
+        mToolbar = (Toolbar) findViewById(toolbarId);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        mToolbar.setNavigationIcon(R.mipmap.icon_toolbar_navigation);
+        mToolbar.setTitle(title);
+    }
+
+    public Toolbar getToolbar() {
+        return mToolbar;
+    }
 
     public void showCustomToast(@DrawableRes int iconRes, String msg, int duration) {
         LayoutInflater inflater = this.getLayoutInflater();

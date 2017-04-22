@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_std_grey_pressed"
-    android:clipToPadding="false"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context="com.wxk.erbiao.LoginActivity">

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
@@ -19,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/temp_control"
+            android:text="@string/security_control"
             android:textColor="@color/text_color_white"
             android:textSize="20sp" />
     </android.support.v7.widget.Toolbar>
@@ -62,21 +63,21 @@
 
 
             <ImageView
-                android:id="@+id/temp_icon_bash_room"
+                android:id="@+id/security_icon_bash_room"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:src="@mipmap/temp_icon" />
+                android:src="@mipmap/in_reading_security" />
 
             <TextView
-                android:id="@+id/temp_bash_room"
+                android:id="@+id/security_bash_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:layout_toLeftOf="@id/temp_icon_bash_room"
+                android:layout_toLeftOf="@id/security_icon_bash_room"
                 android:text="@string/in_reading"
                 android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
@@ -124,21 +125,21 @@
 
 
             <ImageView
-                android:id="@+id/temp_icon_chicken"
+                android:id="@+id/security_icon_chicken"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:src="@mipmap/temp_icon" />
+                android:src="@mipmap/in_reading_security" />
 
             <TextView
-                android:id="@+id/temp_chicken"
+                android:id="@+id/security_chicken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:layout_toLeftOf="@id/temp_icon_chicken"
+                android:layout_toLeftOf="@id/security_icon_chicken"
                 android:text="@string/in_reading"
                 android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
@@ -186,21 +187,21 @@
 
 
             <ImageView
-                android:id="@+id/temp_icon_living_room"
+                android:id="@+id/security_icon_living_room"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:src="@mipmap/temp_icon" />
+                android:src="@mipmap/in_reading_security" />
 
             <TextView
-                android:id="@+id/temp_living_room"
+                android:id="@+id/security_living_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:layout_toLeftOf="@id/temp_icon_living_room"
+                android:layout_toLeftOf="@id/security_icon_living_room"
                 android:text="@string/in_reading"
                 android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
@@ -248,21 +249,21 @@
 
 
             <ImageView
-                android:id="@+id/temp_icon_bed_room"
+                android:id="@+id/security_icon_bed_room"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:src="@mipmap/temp_icon" />
+                android:src="@mipmap/in_reading_security" />
 
             <TextView
-                android:id="@+id/temp_bed_room"
+                android:id="@+id/security_bed_room"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="4dp"
-                android:layout_toLeftOf="@id/temp_icon_bed_room"
+                android:layout_toLeftOf="@id/security_icon_bed_room"
                 android:text="@string/in_reading"
                 android:textColor="@color/color_std_green"
                 android:textSize="22sp" />
